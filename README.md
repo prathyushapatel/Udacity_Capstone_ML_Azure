@@ -63,6 +63,8 @@ automl_config = AutoMLConfig(task='classification',
 - Featurization is likewise done which naturally scales and standardizes the dataset.
 
 ![AutoML_Run_Status](Images/automl_run_status.PNG)
+
+Here are the list of all the algorithms run during the experiment with the summary of each.
 ![Models](Images/Best_run_models.PNG)
 
 ### Results
@@ -82,9 +84,13 @@ To improve the model we can utilize distinctive objective measurement like AUC_w
 
 **Best Run Id**
 
+Best Run Id of the model with the best run which is Voting Ensemble.
+
 ![Best_Run_Id](Images/best_run_id.PNG)
 
 **Best AutoML Model Registered**
+
+In order to deploy the model, we get the best model, register it and deploy it.
 
 ![Registered_Model](Images/registered_model.PNG)
 
@@ -101,7 +107,7 @@ The parameters used for hyperparameter tuning are:
 
 ![HyperDrive_Status](Images/hyperdrive_status_1.PNG)
 
-Here's a picture of Run Widget of the Hyperparameter
+Here's a picture of Run details of the Hyperparameter Tuning
 ![Run Details](Images/Screenshot.png)
 
 ### Results
@@ -131,10 +137,12 @@ The model is effectively sent as a web administration and a REST endpoint is mad
 
 ![Model_Deployment](Images/model_deployment.PNG)
 
+Health of the Deployed Model is Healthy. we can scroll down and check the scoring URI below. We can get the primary key from the Consume Tab.
 ![Healthy_Deployment](Images/service_healthy.PNG)
 
 The endpoint is tested by following way: 
 - using endpoint.py file which passes 1 data points as json to the scoring uri which return a label indicating which digit it is.
+- endpint will accept the scoring uri and the primary key to access the deployed model.
 
 ![Model_Test](Images/model_test.PNG)
 
