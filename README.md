@@ -101,6 +101,9 @@ The parameters used for hyperparameter tuning are:
 
 ![HyperDrive_Status](Images/hyperdrive_status_1.PNG)
 
+Here's a picture of Run Widget of the Hyperparameter
+![Run Details](Images/Screenshot (55).PNG)
+
 ### Results
 The best Accuracy for the HyperDrive model is 0.77799
 The best hyperparameters for this accuracy are:
